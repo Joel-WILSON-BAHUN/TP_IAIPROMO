@@ -40,12 +40,69 @@ body {
 }
 
 /* Navigation */
+/* Modifications pour la navbar responsive */
 .glass-nav {
     background: rgba(3, 86, 3, 0.808);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    width: 100%;
 }
 
+.glass-nav .container {
+    padding: 0;
+}
+
+.glass-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Pour Firefox */
+}
+
+.glass-nav ul::-webkit-scrollbar {
+    display: none; /* Pour Chrome/Safari */
+}
+
+.glass-nav li {
+    flex: 0 0 auto;
+}
+
+.glass-nav a {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Pour les écrans plus larges */
+@media (min-width: 768px) {
+    .glass-nav ul {
+        justify-content: center;
+        overflow-x: visible;
+        padding: 0;
+    }
+    
+    .glass-nav a {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .glass-nav a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .glass-nav a i {
+        margin-right: 0.25rem;
+    }
+}
 /* Cards */
 .glass-card {
     background: rgba(246, 230, 56, 0.658);
