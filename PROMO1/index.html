@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur IAI Promo</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/splash.css">
+
+</head>
+<body>
+    <div class="glass-card p-8 md:p-12 mx-4 w-full max-w-2xl text-center animate__animated animate__fadeIn">
+        <img src="images/LOGO IAI.PNG" alt="Logo IAI" class="w-16 h-16 mx-auto mb-6 rounded-full border-4 border-yellow-400 shadow-lg ">
+        
+        <h1 class="title-font text-4xl md:text-5xl font-bold mb-4 text-white">
+            Bienvenue sur <span class="gold-gradient">IAI Promo</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-100 mb-8">
+            Découvrez et explorez les talents de l'Institut Africain d'Informatique.
+        </p>
+        
+        <div class="mb-8">
+            <a href="main.html" class="btn-gold text-gray-900 font-semibold py-3 px-8 rounded-full inline-block text-lg shadow-lg">
+                <i class="fas fa-compass mr-2"></i> Explorer l'Application
+            </a>
+        </div>
+        
+        <div class="backdrop-blur-md bg-black/10 rounded-lg p-4 inline-block border border-white/10">
+            <p class="text-gray-200 text-sm md:text-base [text-shadow:0_2px_8px_rgba(0,0,0,0.7)]">
+                Pour plus d'informations sur l'IAI, visitez notre site officiel : 
+                <a href="https://www.iai-siege.com/" target="_blank" 
+                    class="btn-outline-gold py-2 px-4 rounded-full inline-block ml-2 text-sm md:text-base hover:bg-yellow-600/10">
+                    <i class="fas fa-external-link-alt mr-1"></i> IAI-Siège.com
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Floating elements for decoration -->
+    <div class="fixed top-20 left-10 w-16 h-16 rounded-full bg-yellow-400 opacity-20 animate-float"></div>
+    <div class="fixed bottom-1/4 right-10 w-24 h-24 rounded-full bg-yellow-400 opacity-15 animate-float animation-delay-2000"></div>
+    <div class="fixed top-1/3 right-1/4 w-12 h-12 rounded-full bg-white opacity-10 animate-float animation-delay-3000"></div>
+    
+    <style>
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        
+        .animation-delay-3000 {
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</body>
+</html>

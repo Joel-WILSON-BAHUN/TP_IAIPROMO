@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - IAI Promo</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/style.css">
+
+
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation et en-tête similaires à la page principale -->
+    <section class="hero-section py-20 text-white">
+        <div class="container mx-auto px-6 text-center animate__animated animate__fadeIn">
+            <h1 class="title-font text-4xl md:text-6xl font-bold mb-4">
+                <span class="gold-gradient">Galerie IAI Promo</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Les photos prises par des étudiants de l'Institut Africain d'Informatique
+            </p>
+          
+        </div>
+    </section>
+
+   
+    <!-- Navigation -->
+     
+  <nav class="glass-nav sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-center">
+                <ul class="flex space-x-1 md:space-x-6 overflow-x-auto py-2">
+                    <li><a href="#promotions" class="text-white px-4 py-2 rounded-full bg-yellow-500 bg-opacity-20 flex items-center justify-center"><i class="fas fa-users mr-2"></i> Promotions</a></li>
+                    <li><a href="#classes" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition flex items-center justify-center"><i class="fas fa-graduation-cap mr-2"></i> cycles</a></li>
+                    <li><a href="#students" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition flex items-center justify-center"><i class="fas fa-search mr-2"></i> Étudiants</a></li>
+                    <li><a href="#statistics" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition flex items-center justify-center"><i class="fas fa-chart-bar mr-2"></i> Statistiques</a></li>
+                    <li><a href="#gallery" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition flex items-center justify-center"><i class="fas fa-images mr-2"></i> Galerie</a></li>
+
+                    <li><a href="#about" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition flex items-center justify-center"><i class="fas fa-info-circle mr-2"></i>ÀPropos</a></li>
+                    <li><a href="#contact" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition flex items-center justify-center"><i class="fas fa-envelope mr-2"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <h1 class="title-font text-4xl font-bold text-center mb-8">
+        </h1>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- 10-12 exemples d'images de galerie -->
+            <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                <img src="images/soutenance1.jpg" alt="Remise diplômes" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold">Soutenance 2020</h3>
+                    <p class="text-gray-600 text-sm">15 Juin 2023</p>
+                </div>
+            </div> 
+
+            <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                <img src="images/atelier.jpg" alt="Atelier pratique" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold">Atelier pratique</h3>
+                    <p class="text-gray-600 text-sm">Restructuration de l'IAI</p>
+                </div>
+            </div>
+
+            <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                <img src="images/soutenance1.jpg" alt="Projets étudiants" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold">Présentation des projets</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                <img src="images/rentre.png" alt="Rentrée scolaire" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold">Rentrée scolaire 2024</h3>
+                    <p class="text-gray-600 text-sm">fevrier 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton pour charger plus de photos -->
+    <div class="text-center mt-10">
+        <button class="px-6 py-3 bg-gradient-to-r from-yellow-500 to-yellow-300 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <i class="fas fa-spinner mr-2"></i>Charger plus de photos
+        </button>
+    </div>
+</main>
+
+<!-- Pied de page -->
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <h3 class="title-font text-2xl mb-2">IAI Promo</h3>
+              
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 IAI Promo. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+</body> 
+</html>

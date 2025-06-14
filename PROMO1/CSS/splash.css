@@ -1,0 +1,59 @@
+   
+        :root {
+            --gold: #FFD700;
+            --light-gold: #FFECB3;
+            --iai-green: #3A4E39;
+        }
+        
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: url('../images/Gradua.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        
+        .title-font {
+            font-family: 'verdana', Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .btn-outline-gold {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: var(--iai-green);
+        }
+    

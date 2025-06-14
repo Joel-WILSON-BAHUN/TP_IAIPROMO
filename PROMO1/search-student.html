@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechercher un Étudiant - IAI Promo</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section py-20 text-white">
+        <div class="container mx-auto px-6 text-center animate__animated animate__fadeIn">
+            <h1 class="title-font text-4xl md:text-6xl font-bold mb-4">
+                <span class="gold-gradient">Rechercher un Étudiant</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Trouvez rapidement les talents de l'Institut Africain d'Informatique
+            </p>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="glass-nav sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-center">
+                <ul class="flex space-x-1 md:space-x-6 overflow-x-auto py-2">
+                    <li><a href="main.html#promotions" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition"><i class="fas fa-users mr-2"></i> Promotions</a></li>
+                    <li><a href="main.html#classes" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition"><i class="fas fa-graduation-cap mr-2"></i> Cycles</a></li>
+                    <li><a href="search-student.html" class="text-white px-4 py-2 rounded-full bg-yellow-500 bg-opacity-20"><i class="fas fa-search mr-2"></i> Rechercher</a></li>
+                    <li><a href="main.html#about" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition"><i class="fas fa-info-circle mr-2"></i> À Propos</a></li>
+                    <li><a href="main.html#contact" class="text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:bg-opacity-20 transition"><i class="fas fa-envelope mr-2"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Search Form -->
+        <div class="search-card p-8 mb-12 animate__animated animate__fadeInUp">
+            <h2 class="title-font text-3xl font-bold text-center mb-6">
+                <span class="gold-gradient">Critères de Recherche</span>
+            </h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+                Affinez votre recherche par nom, promotion ou classe
+            </p>
+            
+            <form class="max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="search-name" class="block text-sm font-medium text-gray-700 mb-1">Nom de l'étudiant</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <input type="text" id="search-name" class="form-input pl-10 w-full py-3 rounded-lg" placeholder="Nom ou prénom">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="search-promo" class="block text-sm font-medium text-gray-700 mb-1">Promotion</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-calendar-alt text-gray-400"></i>
+                            </div>
+                            <input type="text" id="search-promo" class="form-input pl-10 w-full py-3 rounded-lg" placeholder="Ex: 2024 (L3 Info)">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="search-class" class="block text-sm font-medium text-gray-700 mb-1">Cycle</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-graduation-cap text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-class" class="form-input pl-10 w-full py-3 rounded-lg" placeholder="Ex: Analyste Programmeur, Génie Logiciel">
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-8 rounded-full inline-flex items-center transition transform hover:-translate-y-1">
+                        <i class="fas fa-search mr-2"></i> Lancer la recherche
+                    </button>
+                </div>
+            </form>
+            
+            <div class="mt-8 text-center text-sm text-gray-500 flex items-center justify-center">
+                <i class="fas fa-info-circle mr-2 text-yellow-500"></i>
+                Note: Recherche non opérationnelle.
+            </div>
+        </div>
+
+        <!-- Search Results -->
+        <div class="animate__animated animate__fadeInUp">
+            <h2 class="title-font text-3xl font-bold text-center mb-8">
+                <span class="gold-gradient">Résultats de la Recherche</span>
+            </h2>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">3 résultats trouvés</h3>
+                        <p class="text-sm text-gray-600">Pour la recherche "Analyste 2020"</p>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg inline-flex items-center transition">
+                            <i class="fas fa-download mr-2"></i> Exporter les résultats
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Result 1 -->
+                <div class="student-card bg-white rounded-xl overflow-hidden">
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <img src="images/user.jpg" alt="ESSONE-OBIANG Alfran-Emmanuel" class="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">ESSONE-OBIANG Alfran-Emmanuel</h3>
+                        <span class="badge badge-miage mb-3">Analyste programmeur</span>
+                        <div class="text-sm text-gray-600 space-y-1">
+                            <p><i class="fas fa-birthday-cake mr-2 text-yellow-500"></i> Né le: 16/01/1997</p>
+                            <p><i class="fas fa-graduation-cap mr-2 text-yellow-500"></i>DUT</p>
+                            <p><i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i> Origine: Gabon</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-3 flex justify-center">
+                    <a href="#" class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+                        Voir le profil <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+                
+                <!-- Result 2 -->
+                <div class="student-card bg-white rounded-xl overflow-hidden">
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <img src="images/franck.jpg" alt="FOTSI TAKAM Harel Franck" class="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">FOTSI TAKAM Harel Franck</h3>
+                        <span class="badge badge-master mb-3">Analyste Programmeur</span>
+                        <div class="text-sm text-gray-600 space-y-1">
+                            <p><i class="fas fa-birthday-cake mr-2 text-yellow-500"></i> Né le: 25/08/2004</p>
+                            <p><i class="fas fa-graduation-cap mr-2 text-yellow-500"></i>Licence (2023-2024)</p>
+                            <p><i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i> Origine: Cameroun</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-3 flex justify-center">
+                    <a href="#" class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+                        Voir le profil <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+                
+                <!-- Result 3 -->
+                <div class="student-card bg-white rounded-xl overflow-hidden">
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <img src="images/Jamy.png" alt="BARESSY Samuelle Jamila" class="w-24 h-24 rounded-full border-4 border-yellow-400 object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">BARESSY Samuelle Jamila</h3>
+                        <span class="badge badge-ingenieur mb-3">Analyste programmeur</span>
+                        <div class="text-sm text-gray-600 space-y-1">
+                            <p><i class="fas fa-birthday-cake mr-2 text-yellow-500"></i> Né le: 24/02/2003</p>
+                            <p><i class="fas fa-graduation-cap mr-2 text-yellow-500"></i> Analyste Programmeur (2023-2024)</p>
+                            <p><i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i> Origine: Gabon</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-3 flex justify-center">
+                    <a href="#" class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+                        Voir le profil <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex justify-center mt-12 space-x-4 animate__animated animate__fadeInUp">
+            <a href="main.html" class="bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full inline-flex items-center hover:bg-gray-300 transition">
+                <i class="fas fa-home mr-2"></i> Retour à l'accueil
+            </a>
+            <a href="all-students.html" class="bg-yellow-500 text-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center hover:bg-yellow-600 transition">
+                <i class="fas fa-users mr-2"></i> Voir tous les étudiants
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+            <p class="mb-4">
+                &copy; 2025 <span class="gold-gradient font-semibold">IAI Promo</span>. Tous droits réservés.
+            </p>
+            <p class="text-gray-400">
+                Conçu avec <i class="fas fa-heart text-red-400"></i> pour la communauté IAI.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="fixed bottom-8 right-8 bg-yellow-500 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-yellow-600 transition animate-bounce">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</body>
+</html>
